@@ -264,13 +264,21 @@ public class GaugeSliderView: UIView {
      * Sets left icon
      */
     @IBInspectable
-    open var leftIcon = UIImage(named: "snowIcon")
+    open var leftIcon = UIImage(named: "snowIcon") {
+        didSet {
+            leftIconView.image = leftIcon
+        }
+    }
     
     /**
      * Sets right icon
      */
     @IBInspectable
-    open var rightIcon = UIImage(named: "sunIcon")
+    open var rightIcon = UIImage(named: "sunIcon") {
+        didSet {
+            rightIconView.image = rightIcon
+        }
+    }
     
     /**
      * Sets counting method animation

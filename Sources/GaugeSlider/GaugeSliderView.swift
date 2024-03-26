@@ -429,9 +429,9 @@ public class GaugeSliderView: UIView {
         unitLabel.text = "\(Int(minValue + diff * (progress / 100)))\(unit)"
         placeholderLabel.text = placeholder
         
-        unitIndicatorLabels[0].text = "\(Int((maxValue - minValue) / 7))"
-        unitIndicatorLabels[1].text = "\(Int((maxValue - minValue) / 2))"
-        unitIndicatorLabels[2].text = "\(Int(maxValue - (maxValue - minValue) / 7))"
+        unitIndicatorLabels[0].text = "\(Int(minValue + diff * 1 / 3))"
+        unitIndicatorLabels[1].text = "\(Int(minValue + diff * 2 / 3))"
+        unitIndicatorLabels[2].text = "\(Int(maxValue))"
         
         customControlButton.setTitle(customControlButtonTitle, for: .normal)
         
